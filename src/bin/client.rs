@@ -21,7 +21,7 @@ fn main() {
     let server_addr = SocketAddr::new(ip_addr, 8000);
 
 
-    println!("Started client");
+    println!("Started client\n");
     print!("Send to server: ");
     stdout.flush().unwrap();
 
@@ -42,7 +42,7 @@ fn main() {
         let _read_bytes = stream.read(&mut buffer).unwrap();
 
         // print out response from server
-        println!("Received from server: {}", str::from_utf8(&buffer).unwrap());
+        println!("Received from server: {}\n", str::from_utf8(&buffer).unwrap());
 
         print!("Send to server: ");
         stdout.flush().unwrap();
